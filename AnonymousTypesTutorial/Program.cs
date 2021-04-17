@@ -29,10 +29,10 @@ namespace AnonymousTypesTutorial
             source.Add(new Person() { Name="C",Height=1.32,Weight=54.2,Age=15,gender=Person.Gender.female});
 
             var sourceQuery = from per in source
-                              select new { per.Name, per.Height };
+                              select new { per.Name, per.Height,per.Age };
             foreach(var i in sourceQuery)
             {
-                Console.WriteLine($"{i.Name} {i.Height}");
+                Console.WriteLine($"{i.Name} {i.Height} {i.Age}");
             }
         }
     }
